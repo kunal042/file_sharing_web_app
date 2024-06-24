@@ -18,3 +18,4 @@ class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model = file
         fields = ['file', 'uploaded_at']
+

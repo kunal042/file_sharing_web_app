@@ -5,6 +5,7 @@ from django.contrib.auth.models import AbstractUser,Group, Permission
 class User(AbstractUser):
     is_ops_user = models.BooleanField(default=False)
     is_client_user = models.BooleanField(default=False)
+
     groups = models.ManyToManyField(Group, related_name='api_users', blank=True)
     user_permissions = models.ManyToManyField(Permission, related_name='api_users_permissions', blank=True)
 
